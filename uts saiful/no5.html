@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan</title>
+</head>
+<body>
+
+    <button id="tampilbuaya">tampilkan buaya</button>
+    <button id="tampilkuda">tampilkan kuda</button>
+    <button id="tampilmacanputih">tampilkan macan putih</button>
+    <button id="tampilmerak">tampilkan merak</button>
+    <img id="gambar" src="">
+
+    <script>
+        const btnGambarbuaya = document.getElementById("tampilbuaya");
+        const btnGambarkuda = document.getElementById("tampilkuda");
+        const btnGambarmacanputih = document.getElementById("tampilmacanputih");
+        const btnGambarmerak = document.getElementById("tampilmerak");
+
+
+        function tampilbuaya(){
+            let image = document.getElementById("gambar");
+            image.src ="buaya.jpeg";
+        }
+
+        function tampilkuda(){
+            let image = document.getElementById("gambar");
+            image.src = "kuda.jpg";
+        }
+
+        function tampilmacanputih(){
+            let image = document.getElementById("gambar");
+            image.src = "macanputih.jpeg";
+        }
+
+        function tampilmerak(){
+            let image = document.getElementById("gambar");
+            image.src = "merak.jpeg";
+        }
+
+         btnGambarbuaya.addEventListener("click", tampilbuaya);
+        btnGambarkuda.addEventListener("click", tampilkuda);
+        btnGambarmacanputih.addEventListener("click", tampilmacanputih);
+        btnGambarmerak.addEventListener("click", tampilmerak);
+
+
+    </script>
+    
+</body>
+</html>

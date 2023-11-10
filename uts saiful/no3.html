@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat</title>
+    <style>
+        body {
+            background-image: url('path/to/your/image.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+            background-size: cover; /* This property ensures that the background image covers the entire page */
+            background-position: center; /* This property centers the background image */
+            background-repeat: no-repeat; /* This property prevents the background image from repeating */
+            color: #fff; /* Set the text color to white or a contrasting color for better visibility */
+        }
+
+        /* Additional styles can be added for other elements if needed */
+        label, input, button, p {
+            color: #000; /* Set the color for these elements so they are visible against the background */
+        }
+    </style>
+</head>
+<body>
+
+    <label for="nama">Masukkan Nama:</label>
+    <input type="text" id="nama" placeholder="Nama Anda">
+
+    <button onclick="ucapkanSelamat()">Ucapkan Selamat</button>
+
+    <p id="ucapan"></p>
+
+    <script>
+        function ucapkanSelamat() {
+            const inputNama = document.getElementById("nama").value;
+            const waktuSekarang = new Date();
+            const jam = waktuSekarang.getHours();
+
+            let ucapan = "";
+
+            if (jam >= 1 && jam < 11) {
+                ucapan = "Selamat Pagi";
+            } else if (jam >= 11 && jam < 14) {
+                ucapan = "Selamat Siang";
+            } else if (jam >= 14 && jam < 19) {
+                ucapan = "Selamat Sore";
+            } else if (jam >= 19 && jam < 24){
+                ucapan = "Selamat Malam";
+            }
+
+            // Tampilkan ucapan dengan nama
+            const outputUcapan = document.getElementById("ucapan");
+            outputUcapan.textContent = `${ucapan}, ${inputNama}!`;
+        }
+    </script>
+    
+</body>
+</html>
